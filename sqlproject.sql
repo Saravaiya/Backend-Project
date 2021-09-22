@@ -1,0 +1,40 @@
+create database backend;
+use backend;
+create table login(username varchar(255) PRIMARY KEY  NOT NULL,password varchar(255));
+select * from login;
+insert into login(username,password)values('Raju','Raju@123');
+insert into login(username,password)values('Ram','Ram@123');
+insert into login(username,password)values('Lars','Lars@123');
+insert into login(username,password)values('David','David@123');
+insert into login(username,password)values('James','James@123');
+insert into login(username,password)values('Robert','Robert@123');
+insert into login(username,password)values('John','John@123');
+insert into login(username,password)values('Thomas','Thomas@123');
+insert into login(username,password)values('Joseph','Joseph@123');
+insert into login(username,password)values('Mark','Mark@123');
+insert into login(username,password)values('Charles','Charles@123');
+insert into login(username,password)values('Christopher','Christopher@123');
+insert into login(username,password)values('Daniel','Daniel@123');
+insert into login(username,password)values('Mathew','Mathew@123');
+insert into login(username,password)values('Anthony','Anthony@123');
+
+select * from backend.login;
+use backend;
+create table cardetails(CarId int auto_increment PRIMARY KEY  NOT NULL,CarName varchar(255),RegistratioNo int ,CarType varchar(255),CarFare int,CarColour varchar(255),CarPaper varchar(255));
+select * from cardetails;
+insert into cardetails(CarId,CarName ,RegistratioNo,CarType ,CarFare,CarColour,CarPaper)values(102,'Kia Rio',4098,'Sedan',3000,'Black','yes');
+show tables
+
+Select * from backend.cardetails;
+use backend;
+create table UserDetails4(CustomerId int auto_increment PRIMARY KEY NOT NULL,CustomerName Varchar(255),CustomerAddress varchar(255),PhoneNo bigint,GovtId bigint);
+select * from backend.UserDetails4;
+insert into UserDetails4(CustomerId,CustomerName,CustomerAddress,PhoneNo,GovtId)Values(1,'Ram','Krishnagiri',237697,654789976512);
+use backend;
+create table RentDetail(CarName varchar(255),Source varchar(255),Destination varchar(255),kiloMetre int , Perhour int, Perday int);
+insert into RentDetail(CarName,Source,Destination,Kilometre,Perhour,Perday)values('Honda Aircort','Krishnagiri','chennai',250,1000,7000); 
+select * from backend.RentDetail;
+use backend;
+create table Booking2(CarName varchar(255),CarType varchar(255),Source varchar(255), Destination varchar(255),BookDate date,ReturnDate date,Price int,TotalDays int);
+insert into Booking2(CarName,CarType,Source,Destination,BookDate,ReturnDate,Price ,TotalDays)values('NissanVersa','Sedan','Chennai','Krishnagiri','2021-12-12','2021-12-17',6000,6); 
+select * from Booking2;
